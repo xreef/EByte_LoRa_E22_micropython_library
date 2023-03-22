@@ -214,17 +214,6 @@ fixed
  - Ebyte LoRa E22 device for Arduino, esp32 or esp8266: WOR microcontroller and esp32 dev v1 shield
 
 
-## Changelog
-- 2023-01-28 1.0.9 Fix UART_PARITY for ESP32 C3 [Forum](https://www.mischianti.org/forums/topic/problems-including-library/)
-- 2022-09-19 1.0.8 Fix stm32 rogerclerk library https://github.com/xreef/LoRa_E32_Series_Library/pull/48
-- 2022-03-14 1.0.7 Fix frequencies
-- 2022-03-14 1.0.6 Fix support for STM32
-- 2022-03-14 1.0.5 Fix UART baud rate variable limit
-- 2022-02-23 1.0.4 Add Arduino NANO 33 BLE support and minor change
-- 2022-02-03 1.0.3 Fix file example length
-- 2022-01-24 1.0.2 Memory leak fix and adjustment
-- 2021-12-22 1.0.1 Fix on keywork and change DEBUG_PRINTLN on example with Serial And tested Arduino MKR WiFi 1010 and Arduino Nano 33 IoT
-
 https://downloads.arduino.cc/libraries/logs/github.com/xreef/EByte_LoRa_E22_Series_Library/
 
 # An Arduino UNO shield to simplify the use
