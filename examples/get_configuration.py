@@ -4,7 +4,7 @@
 # Description:
 # This script initializes the E22 LoRa module with MicroPython,
 # retrieves the current configuration, and prints it to the console.
-# The code demonstrates how to use the LoRaE32 library to interact with the module and read its configuration.
+# The code demonstrates how to use the LoRaE22 library to interact with the module and read its configuration.
 #
 # Note: This code was written and tested using MicroPython on an ESP32 board.
 #       It works with other boards, but you may need to change the UART pins.

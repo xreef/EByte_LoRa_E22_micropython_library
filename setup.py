@@ -4,6 +4,7 @@ from setuptools import setup
 
 setup(
     name="micropython-lora-e22",
+    package_dir={'': 'src'},
     py_modules=["lora_e22", "lora_e22_constants", "lora_e22_operation_constant"],
     version="0.0.1",
     description="MicroPython LoRa EBYTE E22 device library complete and tested with Arduino SAMD, esp8266, esp32, Raspberry, rp2040 and STM32. sx1262/sx1268",
@@ -15,8 +16,13 @@ setup(
     maintainer="Renzo Mischianti",
     maintainer_email="renzo.mischianti@gmail.com",
     license="MIT",
+    install_requires=[],
+    project_urls={
+        'Documentation': 'https://www.mischianti.org/category/my-libraries/ebyte-lora-e22-devices/',
+        'Documentazione': 'https://www.mischianti.org/it/category/le-mie-librerie/dispositivi-ebyte-lora-e22/',
+    },
     classifiers=[
-        "Development Status :: Stable",
+        "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python :: Implementation :: MicroPython",
         "License :: OSI Approved :: MIT License",
     ],
