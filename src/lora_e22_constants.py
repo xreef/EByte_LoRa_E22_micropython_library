@@ -279,6 +279,54 @@ class TransmissionPower30:
         return TransmissionPower30.POWER_30
 
 
+class TransmissionPower33:
+    POWER_33 = 0b00
+    POWER_30 = 0b01
+    POWER_27 = 0b10
+    POWER_24 = 0b11
+
+    @staticmethod
+    def get_description(transmission_power):
+        if transmission_power == TransmissionPower33.POWER_33:
+            return "33dBm (Default)"
+        elif transmission_power == TransmissionPower33.POWER_30:
+            return "30dBm"
+        elif transmission_power == TransmissionPower33.POWER_27:
+            return "27dBm"
+        elif transmission_power == TransmissionPower33.POWER_24:
+            return "24dBm"
+        else:
+            return "Invalid transmission power param"
+
+    @staticmethod
+    def get_default_value():
+        return TransmissionPower33.POWER_33
+
+
+class TransmissionPower37:
+    POWER_37_00 = 0b00
+    POWER_37_01 = 0b01
+    POWER_37_10 = 0b10
+    POWER_37_11 = 0b11
+
+    @staticmethod
+    def get_description(transmission_power):
+        if transmission_power == TransmissionPower37.POWER_37_00:
+            return "37dBm (Default)"
+        elif transmission_power == TransmissionPower37.POWER_37_01:
+            return "37dBm"
+        elif transmission_power == TransmissionPower37.POWER_37_10:
+            return "37dBm"
+        elif transmission_power == TransmissionPower37.POWER_37_11:
+            return "37dBm"
+        else:
+            return "Invalid transmission power param"
+
+    @staticmethod
+    def get_default_value():
+        return TransmissionPower37.POWER_37_00
+
+
 # here a class that contains the starting frequency of the different devices
 # the device 433 start with 410 frequency and so on
 class OperatingFrequency:
@@ -327,17 +375,16 @@ class TransmissionPower:
             self.transmission_power = int(model[4:6])
 
     def get_transmission_power(self):
-        if self.transmission_power == self.transmission_power:
-            return TransmissionPower22
-        elif self.transmission_power == self.transmission_power:
-            return TransmissionPower30
-        else:
-            return None
-
-    def get_transmission_power_description(self, transmission_power):
         if self.transmission_power == 22:
-            return TransmissionPower22.get_description(transmission_power)
+            return TransmissionPower22
         elif self.transmission_power == 30:
-            return TransmissionPower30.get_description(transmission_power)
+            return TransmissionPower30
+        elif self.transmission_power == 33:
+            return TransmissionPower33
+        elif self.transmission_power == 37:
+            return TransmissionPower37
         else:
             return "Invalid transmission power param"
+
+    def get_transmission_power_description(self, transmission_power):
+        return self.get_transmission_power().get_description(transmission_power)

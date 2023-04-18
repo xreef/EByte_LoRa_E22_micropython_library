@@ -14,6 +14,7 @@
 
 
 ### Changelog
+ - 2023-04-18 0.0.2 Fix regular expression and better constant management
  - 2023-03-21 0.0.1 Fully functional library
 
 ### Library usage
