@@ -2,7 +2,7 @@
 # EBYTE LoRa E22 Series for MicroPython
 #
 # AUTHOR:  Renzo Mischianti
-# VERSION: 0.0.2
+# VERSION: 0.0.3
 #
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e22-devices/
@@ -497,7 +497,9 @@ class LoRaE22:
         if code != ResponseStatusCode.E22_SUCCESS:
             return code, None
 
-        data = self.uart.read()
+        self.managed_delay(100)
+
+        data = self.uart.read_all()
         logger.debug("data: {}".format(data))
         logger.debug("data len: {}".format(len(data)))
 
