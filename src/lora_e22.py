@@ -2,7 +2,7 @@
 # EBYTE LoRa E22 Series for MicroPython
 #
 # AUTHOR:  Renzo Mischianti
-# VERSION: 0.0.3
+# VERSION: 0.0.4
 #
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e22-devices/
